@@ -1,0 +1,25 @@
+###############################################################################
+#### Menta - Inicio de configuración de New Relic APM
+
+# Licencia
+# NEW_RELIC_LICENSE_KEY=????
+
+# Nombre de la aplicación
+NEW_RELIC_APP_NAME="App 1"
+
+# Activar distributed tracing
+NEW_RELIC_DISTRIBUTED_TRACING_ENABLED=true
+
+
+#### Configuración instalación
+NR_APM_URL=https://download.newrelic.com/dot_net_agent/latest_release/newrelic-netcore20-agent_8.39.1.0_amd64.tar.gz
+NR_APM_DIR=/opt/app-root/src/newrelic-netcore20-agent
+
+#### Configuración arranque
+CORECLR_ENABLE_PROFILING=1
+CORECLR_PROFILER={36032161-FFC0-4B61-B559-F6C5D41BAE5A}
+CORECLR_NEWRELIC_HOME=/opt/app-root/src/newrelic-netcore20-agent
+CORECLR_PROFILER_PATH=/opt/app-root/src/newrelic-netcore20-agent/libNewRelicProfiler.so
+
+#### Menta - Fin de configuración de New Relic APM
+###############################################################################

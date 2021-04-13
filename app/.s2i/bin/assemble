@@ -1,0 +1,20 @@
+#!/bin/bash -e
+
+function INFO() {
+    echo "[ MENTA ] $@ "
+}
+
+INFO " * * * * * * * * * * * * Instalación de New Relic APM"
+
+INFO "(1/2) Descargando..."
+curl -sS -O $NR_APM_URL
+
+INFO "(2/2) Descomprimiendo..."
+tar xzf newrelic*.tar.gz
+
+INFO "Agente instalado en:          $NR_APM_DIR"
+INFO "Configuración y arranque:     .s2i/environment"
+
+INFO " * * * * * * * * * * * * Instalación exitosa"
+
+source /usr/libexec/s2i/assemble
